@@ -3,7 +3,5 @@
 
 forge "https://forgeapi.puppetlabs.com"
 
-mod "razorsedge-network"
-mod "puppetlabs-stdlib"
-mod "puppetlabs-ntp"
-
+mod "linuxit-kvmcluster",
+    :git    =>  "https://github.com/linuxit/linuxit-kvmcluster.git"
