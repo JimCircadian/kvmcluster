@@ -12,3 +12,9 @@ gem install librarian-puppet
 
 cd cluster-installer
 librarian-puppet install
+
+if [ ! -f ~/answers.yaml ]; then
+    echo -e "---\nkvmcluster: true" > ~/answers.yaml
+
+    # TODO: We should generate the answers file from the network configuration
+fi
