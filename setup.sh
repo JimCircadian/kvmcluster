@@ -5,7 +5,7 @@ if [ $UID -ne 0 ]; then
     exit 127
 fi
 
-yum -y install ruby ruby-devel
+yum -y install ruby ruby-devel rubygems
 
 gem install kafo
 gem install librarian-puppet
