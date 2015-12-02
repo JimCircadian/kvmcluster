@@ -1,12 +1,13 @@
 #!/bin/bash
 
-if [ $UID ne 0 ]; then
+if [ $UID -ne 0 ]; then
     echo "You need to be root for this"
     exit 127
 fi
 
 yum -y install ruby
 
+gem install bundler
 bundle install
 
 cd cluster-installer
