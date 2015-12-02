@@ -7,6 +7,9 @@ fi
 
 yum -y install ruby ruby-devel rubygems
 
+rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+yum -y install puppet
+
 gem install kafo
 gem install librarian-puppet
 
