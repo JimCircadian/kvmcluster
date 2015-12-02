@@ -1,0 +1,37 @@
+---
+kvmcluster:
+    name_prefix:    'lit'
+    node_number:    1
+    network_bonds:  
+        - 'bond-ifn':
+            ipaddress:  '10.123.8.30'
+            netmask:    '255.255.0.0'
+            gateway:    '10.123.255.254'
+        - 'bond-sn':
+            ipaddress:  '192.168.202.10'
+            netmask:    '255.255.0.0'
+            gateway:    '192.168.202.254'
+        - 'bond-bcn':
+            ipaddress:  '192.168.203.10'
+            netmask:    '255.255.0.0'
+            gateway:    '192.168.203.254'
+    network_slaves:
+        - 'bond-ifn1':
+            macaddress: "00:1a:4a:e8:a7:30"
+            master:     "bond-ifn"
+        - 'bond-ifn2':
+            macaddress: "00:1a:4a:e8:a7:0a"
+            master:     "bond-ifn"
+        - 'bond-sn1':
+            macaddress: "00:1a:4a:e8:a7:0c"
+            master:     "bond-sn"
+        - 'bond-sn2':
+            macaddress: "00:1a:4a:e8:a7:10"
+            master:     "bond-sn"
+        - 'bond-bcn1':
+            macaddress: "00:1a:4a:e8:a7:0b"
+            master:     "bond-bcn"
+        - 'bond-bcn2':
+            macaddress: "00:1a:4a:e8:a7:0e"
+            master:     "bond-bcn"
+
