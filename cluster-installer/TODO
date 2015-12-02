@@ -1,0 +1,5 @@
+Now you should:
+  1. upload your puppet modules to modules directory (you can use librarian-puppet project)
+  2. create default ./config/answers.yaml or modify ./config/cluster-installer.yaml to load another answer file
+  3. run bin/cluster-installer to install your modules
+

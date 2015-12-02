@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+forge "https://forgeapi.puppetlabs.com"
+
+mod "razorsedge-network"
+mod "puppetlabs-stdlib"
+mod "puppetlabs-ntp"
+
