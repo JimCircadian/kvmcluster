@@ -5,10 +5,14 @@ if [ $UID -ne 0 ]; then
     exit 127
 fi
 
-yum -y install ruby
+yum -y install ruby ruby-devel
 
 gem install bundler
-bundle install
+gem install kafo
+gem install librarian-puppet
+
+# Not using bundler for root
+# bundle install
 
 cd cluster-installer
 librarian-puppet install
