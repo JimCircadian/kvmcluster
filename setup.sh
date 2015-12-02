@@ -7,12 +7,8 @@ fi
 
 yum -y install ruby ruby-devel
 
-gem install bundler
 gem install kafo
 gem install librarian-puppet
-
-# Not using bundler for root
-# bundle install
 
 cd cluster-installer
 librarian-puppet install
