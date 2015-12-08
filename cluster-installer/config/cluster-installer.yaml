@@ -4,7 +4,7 @@
   :log_level: debug
   :no_prefix: false
   :mapping: {}
-  :answer_file: "./config/answers.yaml"
+  :answer_file: "~/cluster-installer-answers.yaml"
   :installer_dir: "."
   :modules_dir: "./modules"
   :default_values_dir: /tmp
