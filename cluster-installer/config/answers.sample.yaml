@@ -9,56 +9,72 @@
 --- 
   kvmcluster: 
     name_prefix: jsb
+    node_hostname: lit-jsb-node1
     node_number: "1"
-    network_bond: 
-      sn-bond: 
-        ipaddress:  "192.168.202.31"
-        netmask:    "255.255.255.0"
-        gateway:    "192.168.202.254"
-        dns1:       "192.168.124.50"
-        dns2:       "192.168.124.51"
-        bonding_opts:   "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=sn-eth0"
-      bcn-bond: 
-        ipaddress:  "192.168.203.31"
-        netmask:    "255.255.255.0"
-        gateway:    "192.168.203.254"
-        dns1:       "192.168.124.50"
-        dns2:       "192.168.124.51"
-        bonding_opts:   "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=bcn-eth0"
-    network_bond_bridge:
-      ifn-bond:
-        bridge: "ifn-bridge"
-        bonding_opts:   "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=ifn-eth0"
-    network_bridge:
-      ifn-bridge:
-        ipaddress:  "10.123.8.31"
-        netmask:    "255.255.0.0"
-        gateway:    "10.123.255.254"
-        dns1:       "192.168.124.50"
-        dns2:       "192.168.124.51"
-    network_slave: 
-      ifn-eth0: 
-        macaddress: "00:1A:4A:E8:A7:0A"
-        master: ifn-bond
-      ifn-eth1: 
-        macaddress: "00:1A:4A:E8:A7:0B"
-        master: ifn-bond
-      sn-eth0: 
-        macaddress: "00:1A:4A:E8:A7:30"
-        master: sn-bond
-      sn-eth1: 
-        macaddress: "00:1A:4A:E8:A7:40"
-        master: sn-bond
-      bcn-eth0: 
-        macaddress: "00:1A:4A:E8:A7:0C"
-        master: bcn-bond
-      bcn-eth1: 
-        macaddress: "00:1A:4A:E8:A7:0E"
-        master: bcn-bond
-    network_name: 
-      bcn: lit-jsb-node10.bcn
-      sn: lit-jsb-node10.sn
-      ifn: lit-jsb-node10.ifn
+    node_network: 
+      "1": 
+        ipmi: :undef
+        bcn: :undef
+        sn: :undef
+        ifn: :undef
+        pdu: :undef
+        ups: :undef
+        network_bond: 
+          sn-bond: 
+            ipaddress: "192.168.202.31"
+            netmask: "255.255.255.0"
+            gateway: "192.168.202.254"
+            dns1: "192.168.124.50"
+            dns2: "192.168.124.51"
+            bonding_opts: "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=sn-eth0"
+          bcn-bond: 
+            ipaddress: "192.168.203.31"
+            netmask: "255.255.255.0"
+            gateway: "192.168.203.254"
+            dns1: "192.168.124.50"
+            dns2: "192.168.124.51"
+            bonding_opts: "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=bcn-eth0"
+        network_bond_bridge: 
+          ifn-bond: 
+            bridge: ifn-bridge
+            bonding_opts: "mode=1 miimon=100 use_carrier=1 updelay=120000 downdelay=0 primary=ifn-eth0"
+        network_bridge: 
+          ifn-bridge: 
+            ipaddress: "10.123.8.31"
+            netmask: "255.255.0.0"
+            gateway: "10.123.255.254"
+            dns1: "192.168.124.50"
+            dns2: "192.168.124.51"
+        network_slave: 
+          ifn-eth0: 
+            macaddress: "00:1A:4A:E8:A7:0A"
+            master: ifn-bond
+          ifn-eth1: 
+            macaddress: "00:1A:4A:E8:A7:0B"
+            master: ifn-bond
+          sn-eth0: 
+            macaddress: "00:1A:4A:E8:A7:30"
+            master: sn-bond
+          sn-eth1: 
+            macaddress: "00:1A:4A:E8:A7:40"
+            master: sn-bond
+          bcn-eth0: 
+            macaddress: "00:1A:4A:E8:A7:0C"
+            master: bcn-bond
+          bcn-eth1: 
+            macaddress: "00:1A:4A:E8:A7:0E"
+            master: bcn-bond
+      "2": 
+        ipmi: :undef
+        bcn: :undef
+        sn: :undef
+        ifn: :undef
+        pdu: :undef
+        ups: :undef
+        network_bond: {}
+        network_bond_bridge: {}
+        network_bridge: {}
+        network_slave: {}
     ifn_network: "10.123.0.0/16"
     sn_network: "192.168.202.0/24"
     bcn_network: "192.168.203.0/24"
